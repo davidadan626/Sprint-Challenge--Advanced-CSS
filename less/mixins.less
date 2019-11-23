@@ -1,1 +1,37 @@
 // Mixins Here
+.text {
+    text-align: center;
+    
+}
+.bgcolor{
+    background-color:#F4F4F4
+}
+
+.button-style (@bg-color, @height, @width, @font-color, @font-size) {
+    margin-bottom: 20px;
+    border-radius: 13px;
+    padding:13px 5px 20px 35px;
+    background-color: @bg-color;
+    height: @height;
+    width: @width;
+    color: @font-color;
+    font-size: @font-size;
+    
+    
+}
+.btn {
+    .button-style(#22283A, 46px, 40%, #ffffff, 1.8rem);
+    &:hover {
+        // The compiled color returned is #006667 
+        background-color:black;
+        color:pink;
+      }
+      @media @phone{
+          margin-left: 30px;
+          width: 400px;
+          text-align: center;
+          padding: 0;
+          padding-top: 10px;
+          border-radius:5px;
+      }
+}
